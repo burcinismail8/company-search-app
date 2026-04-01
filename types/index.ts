@@ -2,7 +2,7 @@ export type CompanyType = 'Public' | 'Private';
 
 export type CompanySize = 'Small' | 'Medium' | 'Large';
 
-export interface Company {
+export interface ICompany {
   id: string;
   name: string;
   country: string;
