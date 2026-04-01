@@ -1,10 +1,10 @@
 import { ScrollView } from 'react-native';
 import React from 'react';
-import { Company } from 'types';
+import { ICompany } from 'types';
 import CompanyCard from './CompanyCard';
 
 interface CompaniesListProps {
-  companies: Company[];
+  companies: ICompany[];
 }
 
 const CompaniesList: React.FC<CompaniesListProps> = ({ companies }) => {

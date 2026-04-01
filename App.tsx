@@ -9,9 +9,11 @@ import { ICompany } from 'types';
 import { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
+import FilterModal from 'components/FilterModal';
 export default function App() {
   const [companies, setCompanies] = useState<ICompany[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [filterModalVisible, setFilterModalVisible] = useState(false);
   useEffect(() => {
     if (searchQuery.length > 3) {
       const filteredCompanies = mockData.filter(
@@ -36,7 +38,7 @@ export default function App() {
             {/* Filter Button */}
             <TouchableOpacity
               activeOpacity={0.7}
-              onPress={() => console.log('Filter Pressed')}
+              onPress={() => setFilterModalVisible(true)}
               className="flex-1 flex-row items-center justify-center gap-2 rounded-2xl border border-blue-100 bg-blue-50 py-3">
               <Ionicons name="filter" size={18} color="#3b82f6" />
               <Text className="text-sm font-bold text-blue-600">Filter</Text>
@@ -53,6 +55,7 @@ export default function App() {
           </View>
         </View>
         <CompaniesList companies={companies} />
+        <FilterModal visible={filterModalVisible} onClose={() => setFilterModalVisible(false)} />
       </ScreenContent>
     </SafeAreaProvider>
   );
