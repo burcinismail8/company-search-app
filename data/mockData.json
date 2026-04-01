@@ -12,8 +12,8 @@
         "headquarters": "Tokyo"
       },
       "financialData": [
-        { "year": 2024, "revenue": 8500000, "net_income": 1200000 },
-        { "year": 2025, "revenue": 10200000, "net_income": 2100000 }
+        { "year": 2024, "revenue": 8500, "net_income": 1200 },
+        { "year": 2025, "revenue": 10200, "net_income": 2100 }  
       ]
     },
     {
@@ -29,8 +29,8 @@
         "headquarters": "Copenhagen"
       },
       "financialData": [
-        { "year": 2024, "revenue": 120000000, "net_income": -5000000 },
-        { "year": 2025, "revenue": 145000000, "net_income": 8000000 }
+        { "year": 2024, "revenue": 120, "net_income": -50 },
+        { "year": 2025, "revenue": 145, "net_income": 80 }
       ]
     },
     {
@@ -46,7 +46,7 @@
         "headquarters": "Austin, TX"
       },
       "financialData": [
-        { "year": 2025, "revenue": 450000, "net_income": 45000 }
+        { "year": 2025, "revenue": 450, "net_income": 450 }
       ]
     },
     {
@@ -62,8 +62,8 @@
         "headquarters": "Munich"
       },
       "financialData": [
-        { "year": 2024, "revenue": 210000000, "net_income": 42000000 },
-        { "year": 2025, "revenue": 205000000, "net_income": 38000000 }
+        { "year": 2024, "revenue": 210, "net_income": 420 },
+        { "year": 2025, "revenue": 205, "net_income": 380 }
       ]
     },
     {
@@ -79,8 +79,8 @@
         "headquarters": "London"
       },
       "financialData": [
-        { "year": 2024, "revenue": 15000000, "net_income": 3000000 },
-        { "year": 2025, "revenue": 22000000, "net_income": 5500000 }
+        { "year": 2024, "revenue": 150, "net_income": 300 },
+        { "year": 2025, "revenue": 220, "net_income": 550 }
       ]
     },
     {
@@ -96,8 +96,8 @@
         "headquarters": "Milan"
       },
       "financialData": [
-        { "year": 2024, "revenue": 45000000, "net_income": 2200000 },
-        { "year": 2025, "revenue": 42000000, "net_income": 1100000 }
+        { "year": 2024, "revenue": 450, "net_income": 220 },
+        { "year": 2025, "revenue": 420, "net_income": 110 }
       ]
     }
   ]
