@@ -29,8 +29,8 @@
         "headquarters": "Copenhagen"
       },
       "financialData": [
-        { "year": 2024, "revenue": 120, "net_income": -50 },
-        { "year": 2025, "revenue": 145, "net_income": 80 }
+        { "year": 2024, "revenue": 1200, "net_income": -5000 },
+        { "year": 2025, "revenue": 1450, "net_income": 8000 }
       ]
     },
     {
@@ -46,7 +46,7 @@
         "headquarters": "Austin, TX"
       },
       "financialData": [
-        { "year": 2025, "revenue": 450, "net_income": 450 }
+        { "year": 2025, "revenue": 4500, "net_income": 4500 }
       ]
     },
     {
@@ -62,8 +62,8 @@
         "headquarters": "Munich"
       },
       "financialData": [
-        { "year": 2024, "revenue": 210, "net_income": 420 },
-        { "year": 2025, "revenue": 205, "net_income": 380 }
+        { "year": 2024, "revenue": 2100, "net_income": 4200 },
+        { "year": 2025, "revenue": 2050, "net_income": 3800 }
       ]
     },
     {
@@ -79,8 +79,8 @@
         "headquarters": "London"
       },
       "financialData": [
-        { "year": 2024, "revenue": 150, "net_income": 300 },
-        { "year": 2025, "revenue": 220, "net_income": 550 }
+        { "year": 2024, "revenue": 1500, "net_income": 3000 },
+        { "year": 2025, "revenue": 2200, "net_income": 5500 }
       ]
     },
     {
@@ -96,8 +96,8 @@
         "headquarters": "Milan"
       },
       "financialData": [
-        { "year": 2024, "revenue": 450, "net_income": 220 },
-        { "year": 2025, "revenue": 420, "net_income": 110 }
+        { "year": 2024, "revenue": 4500, "net_income": 2200 },
+        { "year": 2025, "revenue": 4200, "net_income": 1100 }
       ]
     }
   ]

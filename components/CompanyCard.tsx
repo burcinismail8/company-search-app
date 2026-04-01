@@ -1,10 +1,10 @@
 import React from 'react';
 import { Text, View } from 'react-native';
 
-import { Company } from 'types';
+import { ICompany } from 'types';
 
 interface CompanyCardProps {
-  company: Company;
+  company: ICompany;
 }
 
 const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
@@ -51,29 +51,31 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
           Financial History
         </Text>
 
-        {company.financialData.map((financial) => (
-          <View
-            key={financial.year}
-            className="mb-2 flex-row items-center justify-between rounded-xl border border-slate-100 bg-slate-50/30 p-3">
-            <View>
-              <Text className="text-xs font-bold text-slate-900">{financial.year}</Text>
-              <Text className="text-[10px] text-slate-500">Fiscal Year</Text>
-            </View>
+        {company.financialData.map(
+          (financial: { year: number; revenue: number; net_income: number }) => (
+            <View
+              key={financial.year}
+              className="mb-2 flex-row items-center justify-between rounded-xl border border-slate-100 bg-slate-50/30 p-3">
+              <View>
+                <Text className="text-xs font-bold text-slate-900">{financial.year}</Text>
+                <Text className="text-[10px] text-slate-500">Fiscal Year</Text>
+              </View>
 
-            <View className="items-center">
-              <Text className="text-xs font-bold text-slate-900">{financial.revenue}k</Text>
-              <Text className="text-[10px] text-slate-500">Revenue</Text>
-            </View>
+              <View className="items-center">
+                <Text className="text-xs font-bold text-slate-900">{financial.revenue}</Text>
+                <Text className="text-[10px] text-slate-500">Revenue</Text>
+              </View>
 
-            <View className="items-end">
-              <Text
-                className={`text-xs font-bold ${financial.net_income >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
-                {financial.net_income}k
-              </Text>
-              <Text className="text-[10px] text-slate-500">Net Income</Text>
+              <View className="items-end">
+                <Text
+                  className={`text-xs font-bold ${financial.net_income >= 0 ? 'text-emerald-600' : 'text-rose-600'}`}>
+                  {financial.net_income}
+                </Text>
+                <Text className="text-[10px] text-slate-500">Net Income</Text>
+              </View>
             </View>
-          </View>
-        ))}
+          )
+        )}
       </View>
     </View>
   );
