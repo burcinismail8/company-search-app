@@ -1,0 +1,103 @@
+[
+    {
+      "id": "comp-001",
+      "name": "Nexus Robotics",
+      "country": "Japan",
+      "industry": "Technology",
+      "founded_year": 2015,
+      "details": {
+        "company_type": "Private",
+        "size": "Medium",
+        "ceo_name": "Akira Tanaka",
+        "headquarters": "Tokyo"
+      },
+      "financialData": [
+        { "year": 2024, "revenue": 8500000, "net_income": 1200000 },
+        { "year": 2025, "revenue": 10200000, "net_income": 2100000 }
+      ]
+    },
+    {
+      "id": "comp-002",
+      "name": "Green Horizon Energy",
+      "country": "Denmark",
+      "industry": "Renewables",
+      "founded_year": 2008,
+      "details": {
+        "company_type": "Public",
+        "size": "Large",
+        "ceo_name": "Elena Sørensen",
+        "headquarters": "Copenhagen"
+      },
+      "financialData": [
+        { "year": 2024, "revenue": 120000000, "net_income": -5000000 },
+        { "year": 2025, "revenue": 145000000, "net_income": 8000000 }
+      ]
+    },
+    {
+      "id": "comp-003",
+      "name": "Swift Logistics",
+      "country": "USA",
+      "industry": "Transport",
+      "founded_year": 2021,
+      "details": {
+        "company_type": "Private",
+        "size": "Small",
+        "ceo_name": "Marcus Vane",
+        "headquarters": "Austin, TX"
+      },
+      "financialData": [
+        { "year": 2025, "revenue": 450000, "net_income": 45000 }
+      ]
+    },
+    {
+      "id": "comp-004",
+      "name": "Aether BioPharma",
+      "country": "Germany",
+      "industry": "Healthcare",
+      "founded_year": 1995,
+      "details": {
+        "company_type": "Public",
+        "size": "Large",
+        "ceo_name": "Dr. Ingrid Vogel",
+        "headquarters": "Munich"
+      },
+      "financialData": [
+        { "year": 2024, "revenue": 210000000, "net_income": 42000000 },
+        { "year": 2025, "revenue": 205000000, "net_income": 38000000 }
+      ]
+    },
+    {
+      "id": "comp-005",
+      "name": "Nova FinTech",
+      "country": "UK",
+      "industry": "Finance",
+      "founded_year": 2018,
+      "details": {
+        "company_type": "Private",
+        "size": "Medium",
+        "ceo_name": "Sarah Jenkins",
+        "headquarters": "London"
+      },
+      "financialData": [
+        { "year": 2024, "revenue": 15000000, "net_income": 3000000 },
+        { "year": 2025, "revenue": 22000000, "net_income": 5500000 }
+      ]
+    },
+    {
+      "id": "comp-006",
+      "name": "Terra Form Architecture",
+      "country": "Italy",
+      "industry": "Construction",
+      "founded_year": 2002,
+      "details": {
+        "company_type": "Private",
+        "size": "Medium",
+        "ceo_name": "Luca Moretti",
+        "headquarters": "Milan"
+      },
+      "financialData": [
+        { "year": 2024, "revenue": 45000000, "net_income": 2200000 },
+        { "year": 2025, "revenue": 42000000, "net_income": 1100000 }
+      ]
+    }
+  ]
