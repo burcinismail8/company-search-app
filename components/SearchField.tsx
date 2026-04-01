@@ -1,10 +1,13 @@
 import { Ionicons } from '@expo/vector-icons';
-import { useState } from 'react';
 import { Pressable, TextInput, View } from 'react-native';
 
-export function SearchField() {
-  const [query, setQuery] = useState('');
-
+export function SearchField({
+  searchQuery,
+  setSearchQuery,
+}: {
+  searchQuery: string;
+  setSearchQuery: (query: string) => void;
+}) {
   return (
     <View className={styles.wrapper}>
       <View className={styles.field}>
@@ -13,17 +16,17 @@ export function SearchField() {
         </View>
         <TextInput
           className={styles.input}
-          value={query}
-          onChangeText={setQuery}
+          value={searchQuery}
+          onChangeText={setSearchQuery}
           placeholder="Search"
           placeholderTextColor="#9ca3af"
         />
-        {query.length > 0 ? (
+        {searchQuery.length > 0 ? (
           <Pressable
             accessibilityLabel="Clear search"
             className={styles.clearHit}
             hitSlop={8}
-            onPress={() => setQuery('')}>
+            onPress={() => setSearchQuery('')}>
             <Ionicons name="close-circle" size={22} color="#9ca3af" />
           </Pressable>
         ) : null}
