@@ -5,30 +5,36 @@ import './global.css';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import CompaniesList from 'components/CompaniesList';
 import mockData from 'data/mockData.json';
-import { ICompany } from 'types';
+import { ICompany, ICompanyFilters } from 'types';
 import { useEffect, useState } from 'react';
 import { Text, TouchableOpacity, View } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import FilterModal from 'components/FilterModal';
+import { applyCompanyFilters, customSearch } from 'helpers/utils';
+
+const initialFilters: ICompanyFilters = {
+  companyType: 'All',
+  industry: 'All',
+  minRevenue: null,
+  size: 'All',
+};
+
 export default function App() {
   const [companies, setCompanies] = useState<ICompany[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
   const [filterModalVisible, setFilterModalVisible] = useState(false);
+  const [filters, setFilters] = useState<ICompanyFilters>(initialFilters);
+
+  const industries = Array.from(
+    new Set((mockData as ICompany[]).map((company) => company.industry))
+  );
+
   useEffect(() => {
-    if (searchQuery.length > 3) {
-      const filteredCompanies = mockData.filter(
-        (company) =>
-          company.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          company.country.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          company.industry.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          company.details.ceo_name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-          company.details.headquarters.toLowerCase().includes(searchQuery.toLowerCase())
-      );
-      setCompanies(filteredCompanies as ICompany[]);
-    } else {
-      setCompanies(mockData as ICompany[]);
-    }
-  }, [searchQuery]);
+    const searched = customSearch(searchQuery, mockData as ICompany[]);
+    const filtered = applyCompanyFilters(searched, filters);
+    setCompanies(filtered);
+  }, [searchQuery, filters]);
+
   return (
     <SafeAreaProvider>
       <ScreenContent>
@@ -55,7 +61,14 @@ export default function App() {
           </View>
         </View>
         <CompaniesList companies={companies} />
-        <FilterModal visible={filterModalVisible} onClose={() => setFilterModalVisible(false)} />
+        <FilterModal
+          visible={filterModalVisible}
+          onClose={() => setFilterModalVisible(false)}
+          filters={filters}
+          industries={industries}
+          onReset={() => setFilters(initialFilters)}
+          onApply={(nextFilters) => setFilters(nextFilters)}
+        />
       </ScreenContent>
     </SafeAreaProvider>
   );

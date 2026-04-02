@@ -19,8 +19,14 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
               {company.country}
             </Text>
           </View>
-          <View className="rounded-full bg-emerald-100 px-3 py-1">
-            <Text className="text-[10px] font-bold uppercase text-emerald-800">
+          <View
+            className={`rounded-full px-3 py-1 ${
+              company.details.company_type === 'Public' ? 'bg-blue-100' : 'bg-emerald-100'
+            }`}>
+            <Text
+              className={`text-[10px] font-bold uppercase ${
+                company.details.company_type === 'Public' ? 'text-blue-800' : 'text-emerald-800'
+              }`}>
               {company.details.company_type}
             </Text>
           </View>
