@@ -1,4 +1,4 @@
-import { ICompany, ICompanyFilters } from 'types';
+import { ICompany, ICompanyFilters, ICompanySort } from 'types';
 
 const normalizeText = (value: string): string => value.trim().toLowerCase();
 
@@ -70,6 +70,25 @@ const getLatestRevenue = (company: ICompany): number => {
   return latest.revenue;
 };
 
+const enumWeight = (value: string, order: string[]): number => {
+  const index = order.indexOf(value);
+  return index >= 0 ? index : Number.MAX_SAFE_INTEGER;
+};
+
+const compareNumbers = (a: number, b: number): number => {
+  if (a < b) return -1;
+  if (a > b) return 1;
+  return 0;
+};
+
+const compareStrings = (a: string, b: string): number => {
+  const left = normalizeText(a);
+  const right = normalizeText(b);
+  if (left < right) return -1;
+  if (left > right) return 1;
+  return 0;
+};
+
 export const applyCompanyFilters = (
   companies: ICompany[],
   filters: ICompanyFilters
@@ -111,4 +130,31 @@ export const applyCompanyFilters = (
   }
 
   return result;
+};
+
+export const sortCompanies = (companies: ICompany[], sort: ICompanySort): ICompany[] => {
+  const cloned = [...companies];
+
+  cloned.sort((a, b) => {
+    let base = 0;
+
+    if (sort.field === 'revenue') {
+      base = compareNumbers(getLatestRevenue(a), getLatestRevenue(b));
+    } else if (sort.field === 'founded_year') {
+      base = compareNumbers(a.founded_year, b.founded_year);
+    } else if (sort.field === 'industry') {
+      base = compareStrings(a.industry, b.industry);
+    } else {
+      base = compareStrings(a.name, b.name);
+    }
+
+    if (base === 0) {
+      // Stable tie-breaker for deterministic order.
+      base = compareStrings(a.id, b.id);
+    }
+
+    return sort.direction === 'asc' ? base : -base;
+  });
+
+  return cloned;
 };

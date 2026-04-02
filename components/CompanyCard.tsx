@@ -16,7 +16,10 @@ const CompanyCard: React.FC<CompanyCardProps> = ({ company }) => {
           <View className="flex-1 pr-2">
             <Text className="text-xl font-bold leading-tight text-slate-900">{company.name}</Text>
             <Text className="mt-1 text-xs font-semibold uppercase tracking-wider text-indigo-600">
-              {company.country}
+              Founded in {company.country}
+            </Text>
+            <Text className="mt-1 text-xs font-semibold uppercase tracking-wider text-indigo-600">
+              {company.founded_year}
             </Text>
           </View>
           <View

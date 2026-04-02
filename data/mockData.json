@@ -12,8 +12,8 @@
         "headquarters": "Tokyo"
       },
       "financialData": [
-        { "year": 2024, "revenue": 8500, "net_income": 1200 },
-        { "year": 2025, "revenue": 10200, "net_income": 2100 }  
+        { "year": 2014, "revenue": 8500, "net_income": 1200 },
+        { "year": 2015, "revenue": 10200, "net_income": 2100 }  
       ]
     },
     {
@@ -29,8 +29,8 @@
         "headquarters": "Copenhagen"
       },
       "financialData": [
-        { "year": 2024, "revenue": 1200, "net_income": -5000 },
-        { "year": 2025, "revenue": 1450, "net_income": 8000 }
+        { "year": 2004, "revenue": 1200, "net_income": -5000 },
+        { "year": 2005, "revenue": 1450, "net_income": 8000 }
       ]
     },
     {
@@ -38,7 +38,7 @@
       "name": "Swift Logistics",
       "country": "USA",
       "industry": "Transport",
-      "founded_year": 2021,
+      "founded_year": 1990,
       "details": {
         "company_type": "Private",
         "size": "Small",
@@ -46,7 +46,7 @@
         "headquarters": "Austin, TX"
       },
       "financialData": [
-        { "year": 2025, "revenue": 4500, "net_income": 4500 }
+        { "year": 2021, "revenue": 4500, "net_income": 4500 }
       ]
     },
     {
@@ -62,8 +62,8 @@
         "headquarters": "Munich"
       },
       "financialData": [
-        { "year": 2024, "revenue": 2100, "net_income": 4200 },
-        { "year": 2025, "revenue": 2050, "net_income": 3800 }
+        { "year": 1998, "revenue": 2100, "net_income": 4200 },
+        { "year": 1999, "revenue": 2050, "net_income": 3800 }
       ]
     },
     {
@@ -79,8 +79,8 @@
         "headquarters": "London"
       },
       "financialData": [
-        { "year": 2024, "revenue": 1500, "net_income": 3000 },
-        { "year": 2025, "revenue": 2200, "net_income": 5500 }
+        { "year": 2018, "revenue": 1500, "net_income": 3000 },
+        { "year": 2019, "revenue": 2200, "net_income": 5500 }
       ]
     },
     {
@@ -96,8 +96,8 @@
         "headquarters": "Milan"
       },
       "financialData": [
-        { "year": 2024, "revenue": 4500, "net_income": 2200 },
-        { "year": 2025, "revenue": 4200, "net_income": 1100 }
+        { "year": 2002, "revenue": 4500, "net_income": 2200 },
+        { "year": 2003, "revenue": 4200, "net_income": 1100 }
       ]
     }
   ]

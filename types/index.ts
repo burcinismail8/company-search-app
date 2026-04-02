@@ -9,6 +9,14 @@ export interface ICompanyFilters {
   minRevenue: number | null;
 }
 
+export type SortDirection = 'asc' | 'desc';
+export type SortField = 'name' | 'industry' | 'founded_year' | 'revenue' | 'company_type';
+
+export interface ICompanySort {
+  field: SortField;
+  direction: SortDirection;
+}
+
 export interface ICompany {
   id: string;
   name: string;
